@@ -5,7 +5,7 @@ from threading import Thread
 
 
 
-
+b= 2
 a = 1
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
 WIDTH, HEIGHT = 800, 600
