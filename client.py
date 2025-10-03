@@ -14,6 +14,8 @@ init()
 screen = display.set_mode((WIDTH, HEIGHT))
 clock = time.Clock()
 display.set_caption("Пінг-Понг")
+
+print('hello')
 # ---СЕРВЕР ---
 def connect_to_server():
     while True:
