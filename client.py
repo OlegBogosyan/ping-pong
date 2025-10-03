@@ -3,8 +3,13 @@ import socket
 import json
 from threading import Thread
 
+
+
+
+a = 1
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
 WIDTH, HEIGHT = 800, 600
+mixer.init()
 init()
 screen = display.set_mode((WIDTH, HEIGHT))
 clock = time.Clock()
@@ -43,6 +48,8 @@ font_main = font.Font(None, 36)
 # --- ЗОБРАЖЕННЯ ----
 
 # --- ЗВУКИ ---
+wall_hit = mixer.Sound("wall_hit.mp3")
+
 
 # --- ГРА ---
 game_over = False
@@ -97,10 +104,10 @@ while True:
 
         if game_state['sound_event']:
             if game_state['sound_event'] == 'wall_hit':
-                # звук відбиття м'ячика від стін
+                wall_hit.play()
                 pass
             if game_state['sound_event'] == 'platform_hit':
-                # звук відбиття м'ячика від платформи
+                # звук відбиття м'яч    ика від платформи
                 pass
 
     else:
